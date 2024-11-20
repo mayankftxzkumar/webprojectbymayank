@@ -30,9 +30,11 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  grid-auto-rows: 1fr; /* Ensures uniform height */
 }
 
 .card {
+  aspect-ratio: 1; /* Maintains square shape */
   background-size: cover;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -85,11 +87,7 @@ img {
     grid-template-columns: 1fr;
   }
   .card {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-  .card-box {
-    padding: 0.5rem;
+    aspect-ratio: 1; /* Maintains square shape on tablets */
   }
 }
 
